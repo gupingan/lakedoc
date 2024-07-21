@@ -78,6 +78,21 @@ class MarkdownConverter(LakeBaseConverter):
                 if icon_url:
                     return f'![图标]({icon_url})[{title}]({src})'
                 return f'[{title}]({src})'
+            elif card_type == 'imageGallery':
+                card_data = string.decode_card_value(el.attrs.get('value', ''))
+                image_list = card_data.get('imageList', [])
+                image_gallery = []
+                total_width = sum(image.get('original', {}).get('width', 0) for image in image_list)
+                for image in image_list:
+                    image_title = image.get('title', '图片无标题')
+                    image_src = image.get('src')
+                    width = image.get('original', {}).get('width', 0)
+                    if not width or total_width <= 0:
+                        image_gallery.append(f'![图片-{image_title}]({image_src})')
+                    else:
+                        width_percent = int((width / total_width) * 100) - 1
+                        image_gallery.append(f'<img src="{image_src}" alt="{image_title}"  width="{width_percent}%"/>')
+                return f"{''.join(image_gallery)}\n"
             return ''
 
         def convert_li(self, el, text, convert_as_inline):
@@ -102,8 +117,9 @@ class MarkdownConverter(LakeBaseConverter):
         def convert_sup(self, el, text, convert_as_inline):
             return str(el)
 
-    def __init__(self, raw_html: t.Union[str], builder: t.Union[str] = None, title: t.Union[str] = None,
-                 extract_tags: t.Set[str] = None, strip_tags: t.Set[str] = None):
+    def __init__(self, raw_html: t.Union[str], builder: t.Union[str] = None,
+                 title: t.Union[str] = None,
+                 extract_tags: t.Set[str] = None):
         """
         Lake Doc -> Markdown Doc
         :param raw_html: 未经过处理的 HTML 内容（最原生的）
@@ -111,15 +127,12 @@ class MarkdownConverter(LakeBaseConverter):
         :param title: 指定设置转换后 Markdown内容顶行的标题，默认为 None（options 参数）
         :param extract_tags:
             处理 html 时应该删除哪些标签，默认为 {'meta', 'link', 'script', 'style'}（options 参数）
-        :param strip_tags:
-            处理 html 时应该清除哪些标签左右多余的空内容，默认为 {'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'p', 'li'}（options 参数）
         """
         super().__init__(raw_html)
         self.builder = builder or 'html.parser'
         self.title = title
         self.extract_tags = extract_tags or {'meta', 'link', 'script', 'style'}
-        self.strip_tags = strip_tags or {'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'p', 'li'}
-        self.soup = self._create_bs4soup()
+        self.soup = self.create_bs4soup()
 
     def convert(self) -> t.Union[str]:
         html_data = self.create_html()
@@ -133,19 +146,15 @@ class MarkdownConverter(LakeBaseConverter):
 
         :return: HTML 字符串内容
         """
-
         for tag in self.soup.find_all(True):
-            if tag.name in self.strip_tags and tag.string:
-                tag.string = tag.string.strip()
-
-            self._style_render(tag)
+            self.render_styles(tag)
 
             if tag.name in self.extract_tags:
                 tag.extract()
 
         return str(self.soup)
 
-    def _create_bs4soup(self) -> t.Union[BeautifulSoup]:
+    def create_bs4soup(self) -> t.Union[BeautifulSoup]:
         """
         创建 soup 对象（导入、加工、返回）
 
@@ -165,18 +174,18 @@ class MarkdownConverter(LakeBaseConverter):
                     next_sibling.extract()
                     next_sibling = em_tag.find_next_sibling()
 
-            for em_tag in soup.find_all('strong'):
-                next_sibling = em_tag.find_next_sibling()
+            for strong_tag in soup.find_all('strong'):
+                next_sibling = strong_tag.find_next_sibling()
                 while next_sibling and next_sibling.name == 'strong':
-                    em_tag.extend(next_sibling.contents)
+                    strong_tag.extend(next_sibling.contents)
                     next_sibling.extract()
-                    next_sibling = em_tag.find_next_sibling()
+                    next_sibling = strong_tag.find_next_sibling()
 
             return soup
         except FeatureNotFound:
             raise errors.LakeBuilderNotFoundError(self.builder)
 
-    def _style_render(self, el):
+    def render_styles(self, el):
         """
         根据 element 对象，渲染出对应的合法样式
         :param el: bs4 中的 PageElement 对象
