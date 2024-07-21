@@ -12,19 +12,19 @@
 <p align="center">
   <img src="https://img.shields.io/badge/language-python-brightgreen" alt="Language">
   <a href="https://github.com/gupingan/lakedoc/graphs/contributors">
-    <img src="https://img.shields.io/github/contributors/gupingan/lakedoc.svg?style=flat-square" alt="Contributors">
+    <img src="https://img.shields.io/github/contributors/gupingan/lakedoc.svg" alt="Contributors">
   </a>
   <a href="https://github.com/gupingan/lakedoc/network/members">
-    <img src="https://img.shields.io/github/forks/gupingan/lakedoc.svg?style=flat-square" alt="Forks">
+    <img src="https://img.shields.io/github/forks/gupingan/lakedoc.svg?style=flat" alt="Forks">
   </a>
   <a href="https://github.com/gupingan/lakedoc/stargazers">
-    <img src="https://img.shields.io/github/stars/gupingan/lakedoc.svg?style=flat-square" alt="Stargazers">
+    <img src="https://img.shields.io/github/stars/gupingan/lakedoc.svg?style=flat" alt="Stargazers">
   </a>
   <a href="https://github.com/gupingan/lakedoc/issues">
-    <img src="https://img.shields.io/github/issues/gupingan/lakedoc.svg?style=flat-square" alt="Issues">
+    <img src="https://img.shields.io/github/issues/gupingan/lakedoc.svg" alt="Issues">
   </a>
   <a href="https://github.com/gupingan/lakedoc/blob/master/LICENSE">
-    <img src="https://img.shields.io/github/license/gupingan/lakedoc.svg?style=flat-square" alt="MIT License">
+    <img src="https://img.shields.io/github/license/gupingan/lakedoc.svg" alt="MIT License">
   </a>
 </p>
 
