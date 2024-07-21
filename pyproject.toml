@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "lakedoc"
-version = "1.0.0"
+version = "1.0.1"
 description = "Convert Lake documents (Yuque) into the specified format."
 authors = ["gupingan <g332920287@foxmail.com>"]
 readme = "README.md"
