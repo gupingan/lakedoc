@@ -1,14 +1,38 @@
-## Welcome to Lakedoc
+<p align="center">
+  <h3 align="center">Welcome to Lakedoc</h3>
+  <p align="center">
+    <a href="https://github.com/gupingan/lakedoc">查看Demo</a>
+    ·
+    <a href="https://github.com/gupingan/lakedoc/issues">报告Bug</a>
+    ·
+    <a href="https://github.com/gupingan/lakedoc/issues">提出新特性</a>
+  </p>
+</p>
 
-## 模块简介
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
+[![MIT License][license-shield]][license-url]
 
-本模块基于 `beautifulsoup4` 所开发，在本地把 `Lake` 文档转换为指定格式的内容。
+## 目录
+
+- [模块介绍](#模块介绍)
+- [模块特性](#模块特性)
+- [快速入门](#快速入门)
+- [鸣谢](#鸣谢)
+
+---
+
+## 模块介绍
+
+本模块基于 `beautifulsoup4` 所开发，在本地把 `Lake` 文档转换为指定格式的内容
 
 ```html
 <!doctype lake>  
 ```
 
-**非常遗憾**的是，当前仅支持 `Markdown` 格式(精力有限)，其余常用格式可以后续逐渐开发（欢迎各位开源社区的朋友们参与贡献）。
+**遗憾**的是，当前仅支持 `Markdown` 格式(精力有限)，其余常用格式可以后续逐渐开发（欢迎各位开源社区的朋友们参与贡献）。
 
 > PS：因为该模块并不是网络爬虫工具，所以数据源请自行寻找
 
@@ -60,7 +84,7 @@ lakedoc.convert(read_path, save_path, title='# 🚛 超详细Redis7.X 安装以�
 # 存储目录时，使用时间戳命名，默认文件后缀是 md，使用参数 suffix='pdf' 可修改
 ```
 
-## 感谢
+## 鸣谢
 
 
 在此，我要特别感谢以下开源项目和其贡献者们，没有他们的努力和贡献，我的项目 `lakedoc` 将寸步难行：
@@ -68,3 +92,18 @@ lakedoc.convert(read_path, save_path, title='# 🚛 超详细Redis7.X 安装以�
 - **Beautiful Soup 4**：[Beautiful Soup 4](https://www.crummy.com/software/BeautifulSoup/) 是一个非常优秀的 Python 库，用于从 HTML 和 XML 文件中提取数据。感谢作者 Leonard Richardson 以及所有为该项目做出贡献的开发者们。
 
 * **Markdownify**：[Markdownify](https://github.com/matthewwithanm/python-markdownify) 是一个将 HTML 转换为 Markdown 的 Python 库。感谢 Matthew Tretter 及所有贡献者们的努力，使得我们能够轻松地将 HTML 内容转换为 Markdown 格式。
+
+
+
+<!-- links -->
+[your-project-path]:gupingan/lakedoc
+[contributors-shield]: https://img.shields.io/github/contributors/gupingan/lakedoc.svg?style=flat-square
+[contributors-url]: https://github.com/gupingan/lakedoc/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/gupingan/lakedoc.svg?style=flat-square
+[forks-url]: https://github.com/gupingan/lakedoc/network/members
+[stars-shield]: https://img.shields.io/github/stars/gupingan/lakedoc.svg?style=flat-square
+[stars-url]: https://github.com/gupingan/lakedoc/stargazers
+[issues-shield]: https://img.shields.io/github/issues/gupingan/lakedoc.svg?style=flat-square
+[issues-url]: https://img.shields.io/github/issues/gupingan/lakedoc.svg
+[license-shield]: https://img.shields.io/github/license/gupingan/lakedoc.svg?style=flat-square
+[license-url]: https://github.com/gupingan/lakedoc/blob/master/LICENSE.txt
