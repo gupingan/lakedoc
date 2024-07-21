@@ -103,7 +103,9 @@ lakedoc.convert(read_path, save_path, title='# 🚛 超详细Redis7.X 安装以�
 
 在此，我要特别感谢以下开源项目和其贡献者们，没有他们的努力和贡献，我的项目 `lakedoc` 将寸步难行：
 
-- **Beautiful Soup 4**：[Beautiful Soup 4](https://www.crummy.com/software/BeautifulSoup/) 是一个非常优秀的 Python 库，用于从 HTML 和 XML 文件中提取数据。感谢作者 Leonard Richardson 以及所有为该项目做出贡献的开发者们。
+- **Beautiful Soup 4**：[Beautiful Soup 4](https://www.crummy.com/software/BeautifulSoup/) 是一个用于从 HTML 和 XML 文件中提取数据的 Python 库。
 
-* **Markdownify**：[Markdownify](https://github.com/matthewwithanm/python-markdownify) 是一个将 HTML 转换为 Markdown 的 Python 库。感谢 Matthew Tretter 及所有贡献者们的努力，使得我们能够轻松地将 HTML 内容转换为 Markdown 格式。
+- **Markdownify**：[Markdownify](https://github.com/matthewwithanm/python-markdownify) 是一个将 HTML 转换为 Markdown 的 Python 库。
+
+- **Colorama**：[Colorama](https://github.com/tartley/colorama) 是一个用于在 Windows 和其他平台上生成终端颜色输出的 Python 库，
 
