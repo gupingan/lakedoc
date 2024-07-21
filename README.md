@@ -9,6 +9,7 @@
   </p>
 </p>
 
+![Language][language-shield]
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
@@ -97,6 +98,7 @@ lakedoc.convert(read_path, save_path, title='# 🚛 超详细Redis7.X 安装以�
 
 <!-- links -->
 [your-project-path]:gupingan/lakedoc
+[language-shield]: https://img.shields.io/badge/language-python-brightgreen
 [contributors-shield]: https://img.shields.io/github/contributors/gupingan/lakedoc.svg?style=flat-square
 [contributors-url]: https://github.com/gupingan/lakedoc/graphs/contributors
 [forks-shield]: https://img.shields.io/github/forks/gupingan/lakedoc.svg?style=flat-square
