@@ -9,12 +9,25 @@
   </p>
 </p>
 
-![Language][language-shield]
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
+<p align="center">
+  <img src="https://img.shields.io/badge/language-python-brightgreen" alt="Language">
+  <a href="https://github.com/gupingan/lakedoc/graphs/contributors">
+    <img src="https://img.shields.io/github/contributors/gupingan/lakedoc.svg?style=flat-square" alt="Contributors">
+  </a>
+  <a href="https://github.com/gupingan/lakedoc/network/members">
+    <img src="https://img.shields.io/github/forks/gupingan/lakedoc.svg?style=flat-square" alt="Forks">
+  </a>
+  <a href="https://github.com/gupingan/lakedoc/stargazers">
+    <img src="https://img.shields.io/github/stars/gupingan/lakedoc.svg?style=flat-square" alt="Stargazers">
+  </a>
+  <a href="https://github.com/gupingan/lakedoc/issues">
+    <img src="https://img.shields.io/github/issues/gupingan/lakedoc.svg?style=flat-square" alt="Issues">
+  </a>
+  <a href="https://github.com/gupingan/lakedoc/blob/master/LICENSE">
+    <img src="https://img.shields.io/github/license/gupingan/lakedoc.svg?style=flat-square" alt="MIT License">
+  </a>
+</p>
+
 
 ## 目录
 
@@ -94,18 +107,3 @@ lakedoc.convert(read_path, save_path, title='# 🚛 超详细Redis7.X 安装以�
 
 * **Markdownify**：[Markdownify](https://github.com/matthewwithanm/python-markdownify) 是一个将 HTML 转换为 Markdown 的 Python 库。感谢 Matthew Tretter 及所有贡献者们的努力，使得我们能够轻松地将 HTML 内容转换为 Markdown 格式。
 
-
-
-<!-- links -->
-[your-project-path]:gupingan/lakedoc
-[language-shield]: https://img.shields.io/badge/language-python-brightgreen
-[contributors-shield]: https://img.shields.io/github/contributors/gupingan/lakedoc.svg?style=flat-square
-[contributors-url]: https://github.com/gupingan/lakedoc/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/gupingan/lakedoc.svg?style=flat-square
-[forks-url]: https://github.com/gupingan/lakedoc/network/members
-[stars-shield]: https://img.shields.io/github/stars/gupingan/lakedoc.svg?style=flat-square
-[stars-url]: https://github.com/gupingan/lakedoc/stargazers
-[issues-shield]: https://img.shields.io/github/issues/gupingan/lakedoc.svg?style=flat-square
-[issues-url]: https://img.shields.io/github/issues/gupingan/lakedoc.svg
-[license-shield]: https://img.shields.io/github/license/gupingan/lakedoc.svg?style=flat-square
-[license-url]: https://github.com/gupingan/lakedoc/blob/master/LICENSE.txt
