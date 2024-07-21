@@ -18,7 +18,7 @@
 - 允许上层开发者`自定义转换器`、`注册转换器`、`使用转换器`等等一些更高级的行为；
 - 使用非常简单，为上层提供一个接口 `convert`，入口函数进行伪重载，让使用更加方便。
 
-![图片未加载](./lakedoc/assets/arch-dark.png)
+![图片未加载](https://github.com/gupingan/lakedoc/raw/main/lakedoc/assets/arch-dark.png)
 
 ## 快速入门
 
