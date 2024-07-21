@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "lakedoc"
+version = "1.0.0"
+description = "Convert Lake documents (Yuque) into the specified format."
+authors = ["gupingan <g332920287@foxmail.com>"]
+readme = "README.md"
+license = 'MIT'
+repository = 'https://github.com/gupingan/lakedoc'
+homepage = 'https://github.com/gupingan/lakedoc'
+documentation = 'https://github.com/gupingan/lakedoc'
+
+[tool.poetry.dependencies]
+python = ">=3.7"
+beautifulsoup4 = "^4.12.3"
+markdownify = "^0.13.1"
+
+[[tool.poetry.source]]
+name = "tencent-pypi"
+url = "http://mirrors.cloud.tencent.com/pypi/simple/"
+priority = "primary"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
