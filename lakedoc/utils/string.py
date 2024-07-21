@@ -2,6 +2,10 @@ import typing as t
 import re
 import json
 from urllib.parse import unquote, quote
+from colorama import init, Fore, Style
+
+# 初始化 colorama
+init()
 
 
 def extract_integer(text: t.Union[str], default_: t.Union[int] = 0):
@@ -26,18 +30,18 @@ def color_string(text: str, color: str = 'black') -> str:
     :return: 带有颜色的终端字符串
     """
     colors = {
-        'black': '\033[30m',
-        'red': '\033[31m',
-        'green': '\033[32m',
-        'yellow': '\033[33m',
-        'blue': '\033[34m',
-        'magenta': '\033[35m',
-        'cyan': '\033[36m',
-        'white': '\033[37m',
-        'reset': '\033[0m'
+        'black': Fore.BLACK,
+        'red': Fore.RED,
+        'green': Fore.GREEN,
+        'yellow': Fore.YELLOW,
+        'blue': Fore.BLUE,
+        'magenta': Fore.MAGENTA,
+        'cyan': Fore.CYAN,
+        'white': Fore.WHITE,
+        'reset': Style.RESET_ALL
     }
-    color_code = colors.get(color, colors['black'])
-    return f'{color_code}{text}{colors["reset"]}'
+    color_code = colors.get(color, Fore.BLACK)
+    return f'{color_code}{text}{Style.RESET_ALL}'
 
 
 def decode_card_value(value: str) -> dict:
