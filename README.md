@@ -1,7 +1,7 @@
 <p align="center">
   <h3 align="center">Welcome to Lakedoc</h3>
   <p align="center">
-    <a href="https://github.com/gupingan/lakedoc">查看Demo</a>
+    <a href="https://github.com/gupingan/lakedoc/main.py">查看Demo</a>
     ·
     <a href="https://github.com/gupingan/lakedoc/issues">报告Bug</a>
     ·
