@@ -93,6 +93,11 @@ class MarkdownConverter(LakeBaseConverter):
                         width_percent = int((width / total_width) * 100) - 1
                         image_gallery.append(f'<img src="{image_src}" alt="{image_title}"  width="{width_percent}%"/>')
                 return f"{''.join(image_gallery)}\n"
+            elif card_type == 'localdoc':
+                card_data = string.decode_card_value(el.attrs.get('value', ''))
+                src = card_data.get('src', '')
+                name = card_data.get('name', '文件')
+                return f'[{name}]({src})\n'
             return ''
 
         def convert_li(self, el, text, convert_as_inline):
